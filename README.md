@@ -27,4 +27,6 @@ Effect Hook useEffect 在 function component 中加入運作 side effect 的能�
 `$ docsify init ./docs`  
 `$ docsify serve docs`
 
+GitHub Pages `master branch /docs folder`
+
 [Sidebar](https://docsify.js.org/#/more-pages?id=sidebar)
