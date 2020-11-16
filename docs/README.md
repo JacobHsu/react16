@@ -7,6 +7,13 @@ npx create-react-app my-app
 cd my-app
 yarn start
 ```
+To start a new [Create React App project with `TypeScript`](https://create-react-app.dev/docs/adding-typescript/), you can run:
+
+```js
+npx create-react-app my-app --template typescript
+# or
+yarn create react-app my-app --template typescript
+```
 
 ## Hook
 
