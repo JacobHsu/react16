@@ -20,6 +20,29 @@ package.json
   },
 ```
 
+## react-code-input
+
+[![NPM](https://nodei.co/npm/react-code-input.png?downloads=true&stars=true)](https://nodei.co/npm/react-code-input/)
+
+https://jacobhsu.github.io/react-password-input/
+
+App.js
+
+```js
+import React from "react";
+import ReactCodeInput from 'react-code-input';
+
+// function App() {
+class App extends React.PureComponent {
+
+  render() { // add
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <ReactCodeInput type='password' fields={6} />
+```
+
 ## redux
 
 redux
