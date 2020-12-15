@@ -1,5 +1,4 @@
 * [首页](/)
 * [指南](/guide)
-* [npms](/npms)
 * [npm](/zh-tw/npm)
 * [UI](/zh-tw/ui)
