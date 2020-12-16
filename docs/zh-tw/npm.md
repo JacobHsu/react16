@@ -43,6 +43,12 @@ class App extends React.PureComponent {
           <ReactCodeInput type='password' fields={6} />
 ```
 
+## Carousel
+
+[![NPM](https://nodei.co/npm/react-slick.png?downloads=true&stars=true)](https://nodei.co/npm/react-slick/)
+
+[react-slick](https://react-slick.neostack.com/)
+
 ## redux
 
 redux
