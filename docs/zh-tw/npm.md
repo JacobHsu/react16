@@ -57,3 +57,26 @@ react-redux
 ## iframe
 
 [![NPM](https://nodei.co/npm/react-iframe-comm.png?downloads=true&stars=true)](https://nodei.co/npm/react-iframe-comm/)
+
+## 自動化檢查代碼質量
+
+[![NPM](https://nodei.co/npm/huskypng?downloads=true&stars=true)](https://nodei.co/npm/husky/)
+
+package.json
+
+```js
+  "scripts": {
+    "dev": "nodemon",
+    "lint": "eslint src --ext js,ts,tsx",
+    "lint:fix": "npm run lint -- --fix",
+  },
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "npm run lint:fix -- --cache"
+  }
+```
