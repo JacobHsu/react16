@@ -11,6 +11,15 @@ https://material-ui.com/zh/discover-more/related-projects/#carousel
 [TextField 文本框](https://material-ui.com/zh/components/text-fields/#textfield)    
 [Avatar 头像组件](https://material-ui.com/zh/components/avatars/)  
 
+## Dialog
+
+[Dialog 对话框](https://material-ui.com/zh/components/dialogs/)
+
+```js
+<Dialog fullWidth open={
+<Dialog fullScreen open={
+```
+
 ## button
 
 https://material-ui.com/zh/components/buttons/#button
