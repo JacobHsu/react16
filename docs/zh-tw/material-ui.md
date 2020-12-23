@@ -83,3 +83,37 @@ import { makeStyles } from '@material-ui/core/styles';
 
 [InputBase API](https://material-ui.com/zh/api/input-base/)
 [TextField API](https://material-ui.com/zh/api/text-field/)
+
+## material-icons
+
+[material-icons](https://material-ui.com/zh/components/material-icons/)
+[底部导航栏](https://material-ui.com/components/bottom-navigation/)
+
+[Icons 图标](https://material-ui.com/zh/components/icons/#svg-material-icons)
+
+src\images\icons\index.svg
+
+```css
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 27 27">
+    <path d="M13.5-.5c7.73 0 14 6.27 14 14s-6.27 14-14 14-14-6.27-14-14 6.27-14 14-14zm0 1C6.323.5.5 6.323.5 13.5s5.823 13 13 13 13-5.823 13-13-5.823-13-13-13z" transform="translate(-28 -235) translate(-1 226) translate(18 9) translate(11)"/>
+    <path d="M13 0v27c0 .276.224.5.5.5s.5-.224.5-.5V0c0-.276-.224-.5-.5-.5s-.5.224-.5.5z" transform="translate(-28 -235) translate(-1 226) translate(18 9) translate(11)"/>
+    <path d="M0 14h27c.276 0 .5-.224.5-.5s-.224-.5-.5-.5H0c-.276 0-.5.224-.5.5s.224.5.5.5zM22.7 3.735C20.682 5.558 17.241 6.7 13.5 6.7c-3.761 0-7.195-1.125-9.2-2.937-.204-.185-.52-.169-.705.036-.185.205-.17.521.035.706C5.833 6.497 9.506 7.7 13.5 7.7c3.976 0 7.656-1.221 9.87-3.223.205-.185.22-.501.035-.706-.185-.205-.501-.22-.706-.036zM23.37 22.523C21.156 20.52 17.476 19.3 13.5 19.3c-3.994 0-7.667 1.203-9.87 3.195-.205.185-.22.501-.035.706.185.205.501.22.706.036C6.305 21.425 9.739 20.3 13.5 20.3c3.742 0 7.183 1.142 9.2 2.965.204.185.52.169.705-.036.185-.205.17-.52-.035-.706z" transform="translate(-28 -235) translate(-1 226) translate(18 9) translate(11)"/>
+    <path d="M13.675 26.45c-4.056-2.853-6.538-7.653-6.538-12.922 0-5.257 2.468-10.05 6.51-12.894.226-.159.28-.47.121-.697-.159-.226-.47-.28-.696-.121-4.31 3.032-6.934 8.13-6.934 13.712 0 5.594 2.639 10.7 6.962 13.74.226.16.538.105.696-.12.16-.227.105-.539-.12-.698z" transform="translate(-28 -235) translate(-1 226) translate(18 9) translate(11)"/>
+    <path d="M14.097 27.268c4.323-3.04 6.962-8.146 6.962-13.74 0-5.562-2.635-10.667-6.932-13.711-.226-.16-.538-.106-.698.119-.16.225-.106.537.12.697 4.032 2.856 6.51 7.658 6.51 12.895 0 5.27-2.481 10.07-6.537 12.922-.226.16-.28.471-.122.697.16.226.471.28.697.121z" transform="translate(-28 -235) translate(-1 226) translate(18 9) translate(11)"/>
+</svg>
+```
+
+组件属性 通过 “url-loader” 或 “file-loader” 加载也是可行的。 [Create React App 也是这样使用的](https://material-ui.com/zh/components/icons/#svg-material-icons)。
+
+```js
+import { ReactComponent as IndexIcon }  from './images/icons/index.svg';
+  function HomeIcon(props) {
+    return (
+      <SvgIcon {...props}>
+        <IndexIcon/>
+      </SvgIcon>
+    );
+  }
+
+<BottomNavigationAction label={"INDEX"}  icon={<HomeIcon />}
+```

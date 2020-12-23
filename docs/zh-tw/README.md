@@ -16,6 +16,13 @@ npx create-react-app my-app --template typescript
 yarn create react-app my-app --template typescript
 ```
 
+## package.json
+
+```js
+  "scripts": {
+    "start": "set PORT=3001  && react-scripts start",
+```
+
 ## docsify
 
 [docsify.js](https://docsify.js.org/#/zh-cn/quickstart)
