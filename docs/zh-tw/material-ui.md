@@ -117,3 +117,23 @@ import { ReactComponent as IndexIcon }  from './images/icons/index.svg';
 
 <BottomNavigationAction label={"INDEX"}  icon={<HomeIcon />}
 ```
+
+## CardActionArea
+
+[CardActionArea API](https://material-ui.com/zh/api/card-action-area/)
+[background-image](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image)
+
+```js
+ <CardActionArea  style={{
+      backgroundColor:"#eeeeee",
+      flexDirection: "row",
+      display: 'flex',
+      justifyContent:'space-between',
+      alignItems: 'center',
+      paddingTop:8,
+      paddingBottom:8,
+      paddingLeft:16,
+      paddingRight:16,
+      backgroundImage: `url(${bg.iconPath})`
+    }}
+```
