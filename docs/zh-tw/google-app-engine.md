@@ -1,25 +1,25 @@
 # 佈署ReactJS App到 App Engine
 
-在開始之前 記得先安裝Cloud SDK
-裝完後切換到專案目錄下
-在 command視窗下 鍵入
+在開始之前 記得先安裝Cloud SDK  
+裝完後切換到專案目錄下  
+在 command視窗下 鍵入  
 
 `gcloud init`
 
-React 的專案目錄大約如下：
+React 的專案目錄大約如下：  
 
 App
-|-------- build   ======>這個要build過才有
-|-------- node_modules
-|-------- public
-|-------- src
-|-------- .gitignore
-|-------- package.json
-|-------- package-lock.json
+|-------- build   ======>這個要build過才有  
+|-------- node_modules  
+|-------- public  
+|-------- src  
+|-------- .gitignore  
+|-------- package.json  
+|-------- package-lock.json  
 
-我們需要跟App Engine說 如何去佈署一個service
-在根目錄下建立一個  app.yaml 檔案
-檔名可以隨意 通常的命名規則為 AppName_ServiceName.yaml
+我們需要跟App Engine說 如何去佈署一個service  
+在根目錄下建立一個  app.yaml 檔案  
+檔名可以隨意 通常的命名規則為 AppName_ServiceName.yaml  
 
 檔案內容大概為：
 
@@ -112,3 +112,7 @@ target url:      [https://exchange-web-app.df.r.appspot.com]
 ERROR: (gcloud.app.deploy) Error Response: [7] Access Not Configured. Cloud Build has not been used in project exchange-web-app before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=exchange-web-app then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
 
 拜訪上述網址 Cloud Build API 啟用計費
+
+## 自訂網域
+
+SideBar > App Engine > 設定 > [tab] 自訂網域

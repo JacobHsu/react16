@@ -11,6 +11,12 @@ https://material-ui.com/zh/discover-more/related-projects/#carousel
 [TextField 文本框](https://material-ui.com/zh/components/text-fields/#textfield)    
 [Avatar 头像组件](https://material-ui.com/zh/components/avatars/)  
 
+## TextField
+
+[TextField 文本框](https://material-ui.com/zh/components/text-fields/)
+
+`<TextField id="outlined-basic" label="Outlined" variant="outlined" />`
+
 ## Dialog
 
 [Dialog 对话框](https://material-ui.com/zh/components/dialogs/)
@@ -89,6 +95,10 @@ import { makeStyles } from '@material-ui/core/styles';
 [material-icons](https://material-ui.com/zh/components/material-icons/)
 [底部导航栏](https://material-ui.com/components/bottom-navigation/)
 
+```js
+<BottomNavigationAction label="Recents" icon={<img src="imageLink"/>} />
+```
+
 [Icons 图标](https://material-ui.com/zh/components/icons/#svg-material-icons)
 
 src\images\icons\index.svg
@@ -124,6 +134,8 @@ import { ReactComponent as IndexIcon }  from './images/icons/index.svg';
 [background-image](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image)
 
 ```js
+// import BGIMG from './images/bg.png'; // 路徑放這
+// result[1].bgImgPath = BGIMG
  <CardActionArea  style={{
       backgroundColor:"#eeeeee",
       flexDirection: "row",
