@@ -1,6 +1,8 @@
 * [首页](/)
 * [指南](/guide)
 * [npm](/zh-tw/npm)
+* [CLI](/zh-tw/cli)
 * [UI](/zh-tw/ui)
 * [material-ui](/zh-tw/material-ui)
 * [google-app-engine](/zh-tw/google-app-engine)
+* [Tool](/zh-tw/tool)
