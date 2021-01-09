@@ -1,5 +1,6 @@
 * [首页](/)
 * [指南](/guide)
+* [Hooks](/zh-tw/hook)
 * [npm](/zh-tw/npm)
 * [CLI](/zh-tw/cli)
 * [UI](/zh-tw/ui)
