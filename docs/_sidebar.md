@@ -7,3 +7,4 @@
 * [material-ui](/zh-tw/material-ui)
 * [google-app-engine](/zh-tw/google-app-engine)
 * [Tool](/zh-tw/tool)
+* [Case](/case/HideZero)
