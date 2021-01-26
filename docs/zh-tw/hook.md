@@ -65,3 +65,19 @@ export default function ComponentB() {
   return <div>ComponentB: {context}</div>;
 }
 ```
+
+## useEffect
+
+[How to call loading function with React useEffect only once](https://stackoverflow.com/questions/53120972/how-to-call-loading-function-with-react-useeffect-only-once)
+
+> If you only want to run the function given to useEffect after the initial render, you can give it an empty array as second argument.
+
+```js
+function MyComponent() {
+  useEffect(() => {
+    loadDataOnlyOnce();
+  }, []);
+
+  return <div> {/* ... */} </div>;
+}
+```
