@@ -47,7 +47,7 @@ const LoginButton = withStyles(theme => ({
         fontSize: '14px',
     },
   }))(Button);
-  
+
 <LoginButton variant="outlined" style={{
     alignSelf:'center',
     marginTop:12,
@@ -57,6 +57,10 @@ const LoginButton = withStyles(theme => ({
     BTN
 </LoginButton>    
 ```
+
+[How to center a button in material ui](https://stackoverflow.com/questions/51010599/how-to-center-a-button-in-material-ui)
+
+`<DialogActions style={{justifyContent: 'center'}}>`
 
 ## overriding-styles-with-classes
 
@@ -83,7 +87,7 @@ import { makeStyles } from '@material-ui/core/styles';
   classes={{
     root: classes.root, // class name, e.g. `classes-nesting-root-x`
     selected: classes.selected, // class name, e.g. `classes-nesting-label-x`
-  }}/> 
+  }}/>
 
 ```
 
