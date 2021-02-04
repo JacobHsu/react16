@@ -81,3 +81,20 @@ function MyComponent() {
   return <div> {/* ... */} </div>;
 }
 ```
+
+## React.Fragment
+
+`React.Fragment`  
+There will be no extra element right here  
+
+```js
+render() {
+  return (
+    <React.Fragment>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </React.Fragment>
+  );
+}
+```
