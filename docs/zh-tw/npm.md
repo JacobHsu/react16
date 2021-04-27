@@ -58,25 +58,69 @@ react-redux
 
 [![NPM](https://nodei.co/npm/react-iframe-comm.png?downloads=true&stars=true)](https://nodei.co/npm/react-iframe-comm/)
 
-## 自動化檢查代碼質量
+## React Select
 
-[![NPM](https://nodei.co/npm/huskypng?downloads=true&stars=true)](https://nodei.co/npm/husky/)
+[![NPM](https://nodei.co/npm/react-select.png?downloads=true&stars=true)](https://nodei.co/npm/react-select/)
 
-package.json
+
+[react-select.com](https://react-select.com/) [styles](https://react-select.com/styles)
 
 ```js
-  "scripts": {
-    "dev": "nodemon",
-    "lint": "eslint src --ext js,ts,tsx",
-    "lint:fix": "npm run lint -- --fix",
-  },
+import Select from 'react-select';
 
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": "npm run lint:fix -- --cache"
-  }
+const Home = () => {
+
+const colourStyles = {
+control: styles => (
+  { ...styles, backgroundColor: 'black', border: 0, boxShadow: 'none', width: "150px", fontSize: '18px'}
+),
+menu: styles => (
+  { ...styles, backgroundColor: 'black', padding: '2px 0px'}
+),
+option: (styles) => {
+
+  return {
+  ...styles,
+  backgroundColor: 'black',
+  color: 'white',
+  cursor: 'default',
+
+  ':active': {
+    ...styles[':active'],
+    backgroundColor: 'gray',
+    },
+  };
+},
+singleValue: (styles) => ({ ...styles, color: 'white'}),
+valueContainer: (styles) => ({ ...styles, padding: '2px 0px'}),
+};
+
+const [selectedOption, setSelectedOption] = useState({ value: '1', label: 'USDT' })
+
+const options = [
+  { value: '0', label: 'BTC' },
+  { value: '1', label: 'USDT' },
+  { value: '2', label: 'ETH' },
+];
+
+const handleSelectedChange = (selectedOption ) => {
+  setSelectedOption(selectedOption)
+}
+
+return (
+<Select
+  value={selectedOption}
+  onChange={handleSelectedChange}
+  options={options}
+  defaultValue={selectedOption[1]}
+  styles={colourStyles}
+  isSearchable={false}
+  components={{
+    IndicatorSeparator: () => null
+  }}
+/>
 ```
+
+[How can I remove the bar in the react-select?](https://stackoverflow.com/questions/54047325/how-can-i-remove-the-bar-in-the-react-select)  
+[select下拉框option的样式修改](https://www.shuzhiduo.com/A/A7zgK97Wz4/)
+> option的樣式沒辦法修改 因為option是html固有元素 只能通過div ul li模擬select功能
