@@ -132,6 +132,15 @@ import { ReactComponent as IndexIcon }  from './images/icons/index.svg';
 <BottomNavigationAction label={"INDEX"}  icon={<HomeIcon />}
 ```
 
+### custom BottomNavigationAction
+
+example [TabButton.js](https://github.com/JacobHsu/defi-wallet-p/commit/686f969f44bd6e8edade95614af639ef4cd5bae6)
+
+修改svg檔 `transform` 調整位置 移除 `fill` 讓顏色可以修改
+
+[How do I use a custom SVG file with material-ui Icon Component?](https://stackoverflow.com/questions/55754045/how-do-i-use-a-custom-svg-file-with-material-ui-icon-component)
+[Material-UI Style Override?](https://stackoverflow.com/questions/52602392/material-ui-style-override)
+
 ## CardActionArea
 
 [CardActionArea API](https://material-ui.com/zh/api/card-action-area/)
@@ -153,3 +162,29 @@ import { ReactComponent as IndexIcon }  from './images/icons/index.svg';
       backgroundImage: `url(${bg.iconPath})`
     }}
 ```
+
+
+## debug
+
+> Warning: Each child in a list should have a unique "key" prop.
+ in WithStyles(ForwardRef(BottomNavigationAction)) (at Home.js:420)
+
+ ```js
+  {
+      dappList.map(item=>{
+        return <BottomNavigationAction label={item.tabName} icon={<img src={item.icon} width="24" height="24"/>} />
+      })
+  }
+
+  // 不要使用 map
+     return (
+        <BottomNavigation value={value} onChange={handleChange} showLabels={true} >
+          <BottomNavigationAction label="home" value="/" icon={<HomeIcon />} component={Link} to='/'/>
+          <BottomNavigationAction label="resources" value="/resources" icon={<ResourcesIcon /> } component={Link} to='/resources'/>                
+          <BottomNavigationAction label="Q&A" value="/qna" icon={<QnAIcon />}  component={Link} to='/qna'/>
+          <BottomNavigationAction label="profile" value="/profile" icon={<ProfileIcon />} component={Link} to='/profile'/>
+        </BottomNavigation>
+      );
+ ```
+
+ [BottomNavigationAction API](https://material-ui.com/api/bottom-navigation-action/) 不要使用 `map` BottomNavigationAction 沒有`key`選項
