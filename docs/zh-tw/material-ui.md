@@ -188,3 +188,47 @@ example [TabButton.js](https://github.com/JacobHsu/defi-wallet-p/commit/686f969f
  ```
 
  [BottomNavigationAction API](https://material-ui.com/api/bottom-navigation-action/) 不要使用 `map` BottomNavigationAction 沒有`key`選項
+
+ box 使用 `key`
+
+```js
+  <List component="div">
+    {
+      tradePairList.map((item, index)=>{
+        return <Box  style={{
+          width:"100%",
+          flexDirection: "row",
+          display:"flex",
+          justifyContent:"center",
+        }} button onClick={()=>{
+
+        }} key={index}>
+          <Typography style={{
+              fontSize: '14px',
+              color:"#ffffff",
+          }}>
+              {item.tokenName}
+          </Typography>
+        </Box>
+      })
+    }
+  </List>
+```
+
+> Material-UI: The key `label` provided to the classes prop is not implemented in ForwardRef(Paper).
+
+```js
+const InputContainer = withStyles(theme => ({
+    root: {
+        height: 44,
+        width: 160,
+        backgroundColor: "#333333",
+        borderRadius:18,
+    },
+    // label: {
+    //     color: '#ffffff',
+    // },
+}))(Paper);
+```
+
+[Paper API](https://mui.com/zh/api/paper/) CSS Rule name 有 `root` 沒有 `label`
