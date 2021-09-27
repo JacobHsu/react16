@@ -163,7 +163,6 @@ example [TabButton.js](https://github.com/JacobHsu/defi-wallet-p/commit/686f969f
     }}
 ```
 
-
 ## debug
 
 > Warning: Each child in a list should have a unique "key" prop.
@@ -213,6 +212,20 @@ example [TabButton.js](https://github.com/JacobHsu/defi-wallet-p/commit/686f969f
       })
     }
   </List>
+```
+
+```js
+  {tokenList.map((token,index) => {
+    return (
+      <TokenContainer
+        {...{
+          token,
+          selectTokenCallback,
+        }}
+        key={index}
+      />
+    );
+  })}
 ```
 
 [Inline If 與 && 邏輯運算子](https://zh-hant.reactjs.org/docs/conditional-rendering.html)
