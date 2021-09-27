@@ -215,6 +215,28 @@ example [TabButton.js](https://github.com/JacobHsu/defi-wallet-p/commit/686f969f
   </List>
 ```
 
+[Inline If 與 && 邏輯運算子](https://zh-hant.reactjs.org/docs/conditional-rendering.html)
+
+```js
+{
+    unreadMessages.length > 0 && unreadMessages.map((item,index)=>{
+    return <Box style={{
+      display:"flex",
+      flexDirection:"row",
+      width:"100%",
+    }} key={index}>
+      <Typography style={{
+        color:"rgb(2, 192, 118)",
+        fontSize: '16px',
+        flexGrow:1,
+      }}>
+        You have {unreadMessages.length} unread messages.
+      </Typography>
+    </Box>
+  })
+}
+```
+
 > Material-UI: The key `label` provided to the classes prop is not implemented in ForwardRef(Paper).
 
 ```js
@@ -232,3 +254,15 @@ const InputContainer = withStyles(theme => ({
 ```
 
 [Paper API](https://mui.com/zh/api/paper/) CSS Rule name 有 `root` 沒有 `label`
+
+> index.js:1 Warning: Invalid DOM property `class`. Did you mean `className`?
+
+```js
+<Typography class={classes.featuresTitle}>
+  {'Invalid DOM property `class`'}
+</Typography>
+
+<Typography className={classes.title}>
+  {' Did you mean `className`'}
+</Typography>
+```
